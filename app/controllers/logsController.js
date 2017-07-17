@@ -25,15 +25,17 @@ module.exports.create = function createLog (req, res) {
 
 module.exports.all = function createLog (req, res) {
 	var todaysDate = getDayTimeStamp();
-	User.findOne({id: req.xyz.user.id}).then(function (user) {
-		user.getLogs().then(function (logs) {
-			for (var i = 0; i < logs.length; i++) {
-				var createdAtDate = getDayTimeStamp(logs[i].createdAt);
-				logs[i].dataValues.updateAllowed = createdAtDate == todaysDate;
-			}
-			res.send(200, logs);
+	if (req.xyz.user) {
+		User.findOne({id: req.xyz.user.id}).then(function (user) {
+			user.getLogs().then(function (logs) {
+				for (var i = 0; i < logs.length; i++) {
+					var createdAtDate = getDayTimeStamp(logs[i].createdAt);
+					logs[i].dataValues.updateAllowed = createdAtDate == todaysDate;
+				}
+				res.send(200, logs);
+			});
 		});
-	});
+	}
 };
 
 
