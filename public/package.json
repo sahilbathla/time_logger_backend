@@ -1,0 +1,12 @@
+{
+  "name": "time-logger-frontend",
+  "version": "1.0.0",
+  "author": "Sahil Batla",
+  "scripts": {
+    "start": "compass compile"
+  },
+  "devDependencies": {
+    "bower": "^1.3.12",
+    "grunt": "~0.4.5"
+  }
+}

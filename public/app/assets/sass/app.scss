@@ -1,0 +1,30 @@
+@import 'base';
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+	background-color: $theme-color;
+	font-family: fantasy;
+}
+
+input {
+	min-height: $base-unit;
+}
+
+.container {
+	background-color: white;
+	padding: $base-padding;
+	border-radius: $base-padding;
+	width:50%;
+	margin:auto;
+	font-size: $medium-font-size;
+
+	h2 {
+		color: grey;
+		border-bottom: 2px solid grey;
+	}
+}

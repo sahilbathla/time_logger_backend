@@ -1,0 +1,23 @@
+<div class="push-top--20 text--center">
+	<div ng-if="!isLoggedIn && !loginFetched">Loading</div>
+	<div ng-if="!isLoggedIn && loginFetched">
+		<span>Please Log In To Continue</span>
+		<a href="/auth/facebook" class="btn btn-primary"><span class="fa fa-facebook"></span> Facebook</a>
+	</div>
+	<div ng-if="isLoggedIn">
+		<div>Welcome, Please create log</div>
+		<button ng-if="!logFormVisible" ng-click="openLogForm()">Create Log</button>
+		<div ng-show="logFormVisible">
+			<form>
+				<textarea rows="10" cols="80" ng-model="currentLog.description" placeholder="Add log description" required></textarea><br/>
+				<button ng-click="enterLog()" ng-if="!currentLog.id">Enter New Log</button>
+				<button ng-click="enterLog()" ng-if="currentLog.id">Edit Log</button>
+			</form>
+		</div>
+		<div ng-repeat="log in logs" style="padding:5px; width:600px; background:white; margin:10px auto;">
+			<span style="width:150px; overflow: hidden; display:inline-block">{{ log.description }}</span>
+			<span class="push-left">Created at:- {{ log.createdAt }}</span>
+			<span class="float-right push-right" ng-click="openLogForm(log)" ng-if="log.updateAllowed">Edit</span>
+		</div>
+	</div>
+</div>

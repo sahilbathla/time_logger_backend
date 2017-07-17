@@ -1,0 +1,25 @@
+<div class="container">
+	<h2 class="text--center">
+		<span>Current Weather Report</span>
+	</h2>
+	<div ng-if="hasNoWeatherData" class="error">
+		Could not fetch data for your query
+	</div>
+	<div ng-if="isFetchingWeatherData">
+		Fetching Results...
+	</div>
+	<form ng-if="isManualLocationRequired && !isFetchingWeatherData" >
+		<input type="number" placeholder="Enter Zip" ng-model="location.zip" class="width-30" ng-disabled="location.query"></input>
+		<span class="uppercase">Or</span>
+		<input type="text" placeholder="Enter City or Country" ng-model="location.query" class="width-30" ng-disabled="location.zip"></input>
+		<button ng-click="fetchLocation(location)" class="action width-30">Show Results</button>
+	</form>
+	<div ng-if="fetchedLocationWeather">
+		<div>Forecast in <span class="bold">{{ fetchedLocationWeather.city }}</span> : {{ fetchedLocationWeather.forecast }}</div>
+		<div>Temperature :- {{ fetchedLocationWeather.temp }} Celsius</div>
+		<div>Humidity :- {{ fetchedLocationWeather.humidity }} </div>
+		<div class="text--center">
+			<button ng-click="resetLocation()" class="action width-30">Try Another Location</button>
+		</div>
+	</div>
+</div>

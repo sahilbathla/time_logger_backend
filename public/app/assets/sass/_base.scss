@@ -1,0 +1,152 @@
+/* This file includes all the variables, mixins, imports etc */
+
+@import 'compass';
+
+/*Mixins*/
+@mixin base-li-style {
+	display: inline-block;
+	width: 150px;
+	overflow: hidden;
+}
+
+@mixin state-box {
+	height: $base-unit * 5;
+	width: $base-unit * 6;
+	margin: $base-margin * 2;
+}
+
+@mixin hand-cursor {
+	cursor: pointer;
+	cursor: hand;
+}
+
+/* Colors */
+$theme-color: #0079bf;
+$color-error: #a94442;
+$color-background-error : #f2dede;
+
+/* Units */
+$base-unit: 32px;
+$half-base-unit: $base-unit / 2;
+
+/*Fonts*/
+$medium-font-size: $base-font-size - 2px;
+$milli-font-size: $medium-font-size - 2px;
+$micro-font-size: $milli-font-size - 2px;
+$nano-font-size: $micro-font-size - 2px;
+
+.headline-size {
+	font-size: $micro-font-size * 2;
+}
+
+.nano-font-size {
+	font-size: $nano-font-size;
+}
+
+/* Buttons */
+
+.action {
+	background-color: $theme-color;
+	color: white;
+	width: 100%;
+	border: none;
+	border-radius: 2px;
+	min-height: $base-unit;
+	@include hand-cursor;
+	&:focus {
+		box-shadow: none;
+		outline: none;
+	}
+}
+
+/* Margins & Paddings */
+
+$base-margin: $half-base-unit / 2;
+$base-padding: $base-margin;
+
+.push-top--double { margin-top: 2 * $base-unit; }
+.push-left { margin-left: $base-unit; }
+.push-right { margin-right: $base-unit; }
+.push-semi--top { margin-top: $base-unit}
+.push--top { margin-top: 20px; }
+.push-quarter--top { margin-top: 5px; }
+.push-half--top { margin-top: 10px; }
+.push-quarter--bottom { margin-bottom: 5px; }
+
+.push-top--20 {
+	margin-top: 20%;
+}
+
+/*Lists*/
+
+.color-black {
+	color: black;
+}
+
+/* Heights */
+.height-20 {
+	height: 20%;
+}
+
+/* Width */
+.width-30 {
+	width: 30%;
+}
+
+
+/* Float */
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+/* Word Wrap */
+.wrap {
+	white-space: initial;
+}
+
+
+/* General Styles */
+
+h3 {
+	color: white;
+	font-size: $medium-font-size;
+}
+
+.hand-cursor {
+	@include hand-cursor;
+}
+
+.glass {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: black;
+	opacity: 0.6;
+	top: 0;
+	left: 0;
+}
+
+.error {
+	color: $color-error;
+    text-align: center;
+    color: 2px solid red;
+    padding: 8px;
+    margin-bottom: 16px;
+    background-color: $color-background-error;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.text--center {
+	text-align: center;
+}
+
+.uppercase {
+	text-transform:uppercase
+}

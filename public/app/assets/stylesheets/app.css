@@ -1,0 +1,195 @@
+/* This file includes all the variables, mixins, imports etc */
+/*Mixins*/
+/* Colors */
+/* Units */
+/*Fonts*/
+/* line 38, ../sass/_base.scss */
+.headline-size {
+  font-size: 20px;
+}
+
+/* line 42, ../sass/_base.scss */
+.nano-font-size {
+  font-size: 8px;
+}
+
+/* Buttons */
+/* line 48, ../sass/_base.scss */
+.action {
+  background-color: #0079bf;
+  color: white;
+  width: 100%;
+  border: none;
+  border-radius: 2px;
+  min-height: 32px;
+  cursor: pointer;
+  cursor: hand;
+}
+/* line 56, ../sass/_base.scss */
+.action:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+/* Margins & Paddings */
+/* line 67, ../sass/_base.scss */
+.push-top--double {
+  margin-top: 64px;
+}
+
+/* line 68, ../sass/_base.scss */
+.push-left {
+  margin-left: 32px;
+}
+
+/* line 69, ../sass/_base.scss */
+.push-right {
+  margin-right: 32px;
+}
+
+/* line 70, ../sass/_base.scss */
+.push-semi--top {
+  margin-top: 32px;
+}
+
+/* line 71, ../sass/_base.scss */
+.push--top {
+  margin-top: 20px;
+}
+
+/* line 72, ../sass/_base.scss */
+.push-quarter--top {
+  margin-top: 5px;
+}
+
+/* line 73, ../sass/_base.scss */
+.push-half--top {
+  margin-top: 10px;
+}
+
+/* line 74, ../sass/_base.scss */
+.push-quarter--bottom {
+  margin-bottom: 5px;
+}
+
+/* line 76, ../sass/_base.scss */
+.push-top--20 {
+  margin-top: 20%;
+}
+
+/*Lists*/
+/* line 82, ../sass/_base.scss */
+.color-black {
+  color: black;
+}
+
+/* Heights */
+/* line 87, ../sass/_base.scss */
+.height-20 {
+  height: 20%;
+}
+
+/* Width */
+/* line 92, ../sass/_base.scss */
+.width-30 {
+  width: 30%;
+}
+
+/* Float */
+/* line 98, ../sass/_base.scss */
+.float-left {
+  float: left;
+}
+
+/* line 102, ../sass/_base.scss */
+.float-right {
+  float: right;
+}
+
+/* Word Wrap */
+/* line 107, ../sass/_base.scss */
+.wrap {
+  white-space: initial;
+}
+
+/* General Styles */
+/* line 114, ../sass/_base.scss */
+h3 {
+  color: white;
+  font-size: 14px;
+}
+
+/* line 119, ../sass/_base.scss */
+.hand-cursor {
+  cursor: pointer;
+  cursor: hand;
+}
+
+/* line 123, ../sass/_base.scss */
+.glass {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.6;
+  top: 0;
+  left: 0;
+}
+
+/* line 133, ../sass/_base.scss */
+.error {
+  color: #a94442;
+  text-align: center;
+  color: 2px solid red;
+  padding: 8px;
+  margin-bottom: 16px;
+  background-color: #f2dede;
+}
+
+/* line 142, ../sass/_base.scss */
+.bold {
+  font-weight: bold;
+}
+
+/* line 146, ../sass/_base.scss */
+.text--center {
+  text-align: center;
+}
+
+/* line 150, ../sass/_base.scss */
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* line 3, ../sass/app.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 9, ../sass/app.scss */
+body {
+  background-color: #0079bf;
+  font-family: fantasy;
+}
+
+/* line 14, ../sass/app.scss */
+input {
+  min-height: 32px;
+}
+
+/* line 18, ../sass/app.scss */
+.container {
+  background-color: white;
+  padding: 8px;
+  border-radius: 8px;
+  width: 50%;
+  margin: auto;
+  font-size: 14px;
+}
+/* line 26, ../sass/app.scss */
+.container h2 {
+  color: grey;
+  border-bottom: 2px solid grey;
+}
