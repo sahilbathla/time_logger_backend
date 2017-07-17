@@ -11,7 +11,7 @@ var logsController = require('./app/controllers/logsController.js');
 
 process.env.PWD = process.cwd()
 
-app.use(express.static('public'));
+app.use(express.static(process.env.PWD + '/public'));
 app.use(cookieParser('blargadeeblargblarg'));
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true }));
