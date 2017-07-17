@@ -7,12 +7,9 @@
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
-  "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+  "heroku": {
+    "url": "postgres://gtiuichsncjeiu:85f60f81163a2590312b5e96e873b4a9013d1d5f1c3021339b1040b6f2453af0@ec2-23-23-225-12.compute-1.amazonaws.com:5432/d74nonpha3aba5",
+    "dialect": "postgres"
   },
   "production": {
     "username": "root",
