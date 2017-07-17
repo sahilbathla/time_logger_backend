@@ -3,7 +3,7 @@ var auth = config[config.environment];
 
 const Sequelize = require('sequelize');
 
-if (proces.env.DATABASE_URL) {
+if (process.env.DATABASE_URL) {
 	const sequelize = new Sequelize(process.env.DATABASE_URL);
 } else {
 	const sequelize = new Sequelize(auth.database, auth.username, auth.password, {
