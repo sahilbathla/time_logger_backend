@@ -9,6 +9,7 @@ var bodyParser = require('body-parser');
 
 var logsController = require('./app/controllers/logsController.js');
 
+process.env.PWD = process.cwd()
 
 app.use(express.static('public'));
 app.use(cookieParser('blargadeeblargblarg'));
@@ -25,7 +26,7 @@ app.use(passport.session());
 
 
 app.get('/', function (req, res) {
-	res.sendFile( __dirname + "/public/" + "index.html" );
+	res.sendFile( process.env.PWD + "/public/" + "index.html" );
 });
 
 app.post('/logs', function (req, res) {
