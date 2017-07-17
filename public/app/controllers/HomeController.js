@@ -1,4 +1,4 @@
-define('controllers/HomeController', ['app', 'services/LoginService', 'services/logService'], function (app) {
+define('controllers/HomeController', ['app', 'services/LoginService', 'services/LogService'], function (app) {
 	'use strict';
 
 	function HomeController($scope, $timeout, loginService, logService) {
