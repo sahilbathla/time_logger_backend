@@ -2,7 +2,7 @@
   "environment": "development",
   "development": {
     "username": "postgres",
-    "password": "sahil",
+    "password": null,
     "database": "time_logger",
     "host": "127.0.0.1",
     "dialect": "postgres"
