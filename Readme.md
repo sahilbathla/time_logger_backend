@@ -17,14 +17,14 @@ Time Logger basically lets you add time logs of what you were doing in a day
 
 2) Rename auth.js.example to auth.js and add your facebook API
 
-Rename config.json.example to config.json to add your database config
+3) Rename config.json.example to config.json to add your database config
 
-3) ./node_modules/.bin/sequelize db:migrate
+4) `./node_modules/.bin/sequelize db:migrate`
 
-4) npm install (sudo if required)
+5) `npm install` (sudo if required)
 
-5) Make sure you have setup the frontend app - https://github.com/sahilbathla/time_logger_frontend
+6) Make sure you have setup the frontend app - https://github.com/sahilbathla/time_logger_frontend
 
-6) Create symlinks or copy the frontend app to public folder
+7) Create symlinks or copy the frontend app to public folder
 
-7) npm start
+8) npm start
