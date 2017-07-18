@@ -27,6 +27,7 @@ define('controllers/HomeController', ['app', 'services/LoginService', 'services/
 			logService.createLog({ logDescription: $scope.currentLog.description }).then(function (value) {
 				var log = value.data;
 				log.createdAt = log.createdAt.substr(0, log.createdAt.length - 5);
+				log.updateAllowed = true;
 				$scope.logs.push(log);
 				$scope.logFormVisible = false;
 			}).catch(function (err) {
@@ -38,7 +39,7 @@ define('controllers/HomeController', ['app', 'services/LoginService', 'services/
 			logService.editLog($scope.currentLog.id, { logDescription: $scope.currentLog.description }).then(function (value) {
 				var log = value.data;
 				for (var i = 0; i < $scope.logs.length; i++) {
-					if ($scope.logs[i].id == log.id) {
+					if ($scope.logs[i].id === log.id) {
 						$scope.logs[i].description = log.description;
 					}
 				}
